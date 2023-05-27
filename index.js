@@ -98,6 +98,13 @@ function allWagesFor(employee) {
   return totalWages;
 }
 
+
+function calculatePayroll(employees) {
+  return employees.reduce((total, employee) => total + allWagesFor(employee), 0);
+}
+
+
+
 // function calculatePayroll(employees) {
 //   let sum = 0;
 //   for (let i = 0; i < emArray.length; i++) {
@@ -105,11 +112,3 @@ function allWagesFor(employee) {
 //   }
 //   return sum;
 // }
-
-
-function calculatePayroll(employees, wagesEarnedOnDate, init) {
-  return employees.reduce((employee) => wagesEarnedOnDate(employee, date), init);
-}
-
-calculatePayroll (employees, wagesEarnedOnDate, 0)
-
